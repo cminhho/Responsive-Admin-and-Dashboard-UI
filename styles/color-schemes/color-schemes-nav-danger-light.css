@@ -1,0 +1,24 @@
+.logo-brand{
+    background: #E9573F;
+}
+.top-nav-content{
+    background: #E9573F;
+}
+.top-navbar{
+
+}
+.sidebar-menu{
+    background: #ffffff;
+}
+
+.btn-collapse-sidebar-right, .btn-collapse-sidebar-left, .dropdown-toggle{
+    color: white !important;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #3BAFDA !important;
+}
+.sidebar-left-content{
+    color: #656D78 !important;
+    border-bottom-color: #F6F7F9 !important;
+}

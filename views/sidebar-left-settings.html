@@ -1,0 +1,13 @@
+<li class="text-content" ng-repeat="item in data">
+    <div class="switch">
+        <div class="onoffswitch blank">
+            <input name="onoffswitch" class="onoffswitch-checkbox" id="{{item.title}}" checked=""
+                   type="checkbox">
+            <label class="onoffswitch-label" for="{{item.title}}">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+    </div>
+    <span class="sidebar-left-content">{{item.title}}</span>
+</li>

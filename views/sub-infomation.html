@@ -1,0 +1,19 @@
+<!--<i class="fa fa-users icon-bg"></i>-->
+<span class="fa fa-{{item.icon}} icon-bg"></span>
+<div class="tiles-inner text-center">
+    <p>{{item.name}}</p>
+
+    <h1 class="bolded" simplified-number st-data="{{item.number}}"></h1>
+
+    <div class="progress no-rounded progress-xs">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+             aria-valuemax="100" style="width: 80%">
+        </div>
+        <!-- /.progress-bar .progress-bar-success -->
+    </div>
+    <!-- /.progress .no-rounded -->
+    <p>
+        <small>{{context}}</small>
+    </p>
+</div>
+<!-- /.tiles-inner -->

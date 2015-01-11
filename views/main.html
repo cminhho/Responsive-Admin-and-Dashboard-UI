@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADING -->
+    <div class="row">
+        <main-page-heading st-title="DASHBOARD" st-content="Sub heading here"></main-page-heading>
+    </div>
+    <!-- END PAGE HEADING -->
+
+    <!-- BEGIN EXAMPLE ALERT -->
+    <div class="row">
+
+        <mc-alert st-data="alertList" st-max="1"></mc-alert>
+
+    </div>
+    <!-- END EXAMPLE ALERT -->
+
+    <!-- BEGIN SiTE INFORMATIONS -->
+    <div class="row" style="margin-right: -30px; margin-left: -30px;">
+        <main-site-infomation st-data="siteInfomation" st-data-last="siteInfomationLast"></main-site-infomation>
+    </div>
+    <!-- END SITE INFORMATIONS -->
+
+    <!--BEGIN CHART WIDGET-->
+    <div class="row">
+        <main-widget></main-widget>
+    </div>
+    <!--END CHART WIDGET-->
+
+    <!--BEGIN SERVER STATUS-->
+    <div class="row">
+        <main-server-status></main-server-status>
+    </div>
+    <!--END SERVER STATUS-->
+
+    <!-- BEGIN WEATHER WIDGET -->
+    <div class="row" style="margin-right: -30px; margin-left: -30px;">
+        <main-weather-widget st-list="weatherCountry" st-title="Your favorite places weather"></main-weather-widget>
+    </div>
+    <!-- END WEATHER WIDGET -->
+
+    <!--BEGIN CAROUSEL ITEM-->
+    <div class="row">
+        <last-week-popular-item st-data="lastWeekPopularItem" st-title="Last week popular item"></last-week-popular-item>
+    </div>
+    <!--END CAROUSEL ITEM-->
+
+    <!--BEGIN ITEM SHOWCASE-->
+    <div class="row" style="margin-right: -30px; margin-left: -30px;">
+        <main-item-showcase></main-item-showcase>
+    </div>
+    <!--END ITEM SHOWCASE-->
+
+</div>

@@ -1,0 +1,50 @@
+<!-- BEGIN CHART WIDGET 1 -->
+<div class="panel panel-info panel-no-border panel-square">
+    <div class="panel-heading">
+        <div class="right-content">
+            <div class="btn-group">
+                <button class="btn btn-info btn-sm active">
+                    Lifetime
+                </button>
+                <button class="btn btn-info btn-sm">
+                    This year
+                </button>
+            </div>
+        </div>
+        <h3 class="panel-title">{{data.tilte | uppercase}}</h3>
+    </div><!-- /.panel-heading -->
+    <div class="the-box no-border full no-margin">
+        <div class="the-box no-border bg-info no-margin full" style="height:250px">
+            <mc-morris-chart mc-data="data.lastyear" mc-id="morris-widget-1" mc-type="line"></mc-morris-chart>
+        </div><!-- the-box no-border bg-info no-margin full -->
+        <div class="the-box no-border bg-dark no-margin chart-des">
+            <div class="row">
+                <div class="col-xs-7">
+                    <h3 class="bolded">{{data.lastyear.title | uppercase}}</h3>
+                    <p>Today {{data.today}}</p>
+                </div><!-- /.col-xs-7 -->
+                <div class="col-xs-5 text-right">
+                    <h3 class="bolded text-success">
+
+                        <mc-ceil-number st-data="{{data.lastyear.point}}"></mc-ceil-number></h3>
+
+                    <p>{{data.lastyear.status}}({{data.lastyear.percent}})</p>
+                </div><!-- /.col-xs-5 -->
+            </div><!-- /.row -->
+        </div><!-- the-box no-border bg-dark no-margin -->
+        <div class="the-box no-border no-margin">
+            <div class="row">
+                <div class="col-xs-7">
+
+                    <h1 class="bolded" simplified-number st-data="{{data.earnings.point}}"></h1>
+
+                    <p class="text-muted">{{data.earnings.title}}</p>
+                </div><!-- /.col-xs-5 -->
+                <div class="col-xs-5" style="height:120px">
+                    <mc-morris-chart mc-data="data.earnings" mc-id="morris-widget-2" mc-type="bar"></mc-morris-chart>
+                </div><!-- /.col-xs-5 -->
+            </div><!-- /.row -->
+        </div><!-- the-box no-border no-margin -->
+    </div><!-- /.the-box no-border .full -->
+</div><!-- /.the-box no-border .full -->
+<!-- END CHART WIDGET 1 -->

@@ -1,0 +1,54 @@
+<div class="top-navbar">
+    <div class="top-navbar-inner">
+
+        <!-- Begin Logo brand -->
+        <top-navbar-logo st-logo="{{logo}}"></top-navbar-logo>
+        <!-- End Logo brand -->
+
+        <div class="top-nav-content">
+
+            <!-- Begin button sidebar left toggle -->
+
+            <div class="btn-collapse-sidebar-left" ng-click="sidebarLeft()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- /.btn-collapse-sidebar-left -->
+            <!-- End button sidebar left toggle -->
+
+            <!-- Begin button sidebar right toggle -->
+            <div class="btn-collapse-sidebar-right" ng-click="sidebarRight()">
+                <i class="fa fa-bullhorn"></i>
+            </div>
+            <!-- /.btn-collapse-sidebar-right -->
+            <!-- End button sidebar right toggle -->
+
+            <!-- Begin button nav toggle -->
+            <div class="btn-collapse-nav" data-toggle="collapse" data-target="#main-fixed-nav">
+                <i class="fa fa-plus icon-plus"></i>
+            </div>
+            <!-- /.btn-collapse-sidebar-right -->
+            <!-- End button nav toggle -->
+
+
+            <!-- Begin user session nav -->
+            <top-navbar-user st-username="{{users[1].name}}" st-userimage="{{users[1].avatar}}"></top-navbar-user>
+            <!-- End user session nav -->
+
+            <!-- Begin Collapse menu nav -->
+            <div class="collapse navbar-collapse" id="main-fixed-nav">
+                <!-- Begin nav search form -->
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Search" type="text">
+                    </div>
+                </form>
+                <!-- End nav search form -->
+                <top-navbar-notify></top-navbar-notify>
+            </div>
+            <!-- /.navbar-collapse -->
+            <!-- End Collapse menu nav -->
+        </div>
+        <!-- /.top-nav-content -->
+    </div>
+    <!-- /.top-navbar-inner -->
+</div>

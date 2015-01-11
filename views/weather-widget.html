@@ -1,0 +1,34 @@
+<div class="the-box no-border" id="weather-widget-1" style="position: relative; z-index: 0; background: none;">
+    <h4 class="text-center bolded white-text">{{today.country}}</h4>
+
+    <p class="text-center white-text">{{today.status}}</p>
+
+    <div class="weather-widget">
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <canvas id="sleet" width="140" height="140"></canvas>
+            </div>
+            <!-- /.col-xs-6 -->
+            <div class="col-xs-6">
+                <h1 class="bolded degrees white-text">{{today.temperature}}<i class="wi-degrees"></i></h1>
+
+                <p class="white-text">{{today.prediction}}</p>
+            </div>
+            <!-- /.col-xs-6 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.weather-widget -->
+    <div class="row">
+        <mc-weather-small-icon st-index="{{$index}}" ng-repeat="weather in tomorow"></mc-weather-small-icon>
+
+
+    </div>
+    <!-- /.row -->
+    <div class="backstretch"
+         style="left: 0; top: 0; right: 0; overflow: hidden; margin: 0px; padding: 0px; height: 418px; width: 100%; z-index: -999998; position: absolute;">
+        <img src="http://diliat.in/themeforest/sentir/1.1.0/assets/img/photo/medium/img-12.jpg"
+             style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 418px; max-height: none; max-width: none; z-index: -999999; left: 0; top: 0px;">
+    </div>
+</div><!-- /.the-box bg-info no-border -->
+    

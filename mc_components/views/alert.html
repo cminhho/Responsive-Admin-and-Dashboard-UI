@@ -1,0 +1,6 @@
+<div ng-repeat="item in data | limitTo: max"
+     class="alert alert-warning alert-bold-border fade in alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click="delete($index)">×</button>
+    <p><strong>{{item.title}}</strong></p>
+    <p class="text-muted" ng-bind-html="item.content"></p>
+</div>

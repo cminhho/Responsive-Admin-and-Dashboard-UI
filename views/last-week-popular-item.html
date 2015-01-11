@@ -1,0 +1,26 @@
+<!-- BEGIN CAROUSEL ITEM -->
+
+<div class="the-box no-border">
+    <h4 class="small-heading more-margin-bottom text-center">LAST WEEK POPULAR ITEM</h4>
+
+    <div id="owl-popular" class="owl-carousel shop-carousel">
+    <div class="item" ng-repeat="item in data">
+        <div class="media">
+            <a class="pull-left" href="#fakelink">
+                <img class="media-object sm" ng-src="{{item.url}}" alt="Image">
+            </a>
+
+            <div class="media-body">
+                <h4 class="media-heading"><a href="#fakelink">{{item.title}}</a></h4>
+
+                <p class="brand">{{item.description}}</p>
+
+                <p class="price text-danger"><strong>{{item.price | currency}}</strong></p>
+            </div>
+        </div>
+    </div>
+    <!-- /.item -->
+    </div>
+    <!-- /#store-item-carousel-1 -->
+</div><!-- /.the-box .no-border -->
+<!-- END CAROUSEL ITEM -->

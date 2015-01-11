@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" />
+
+    <!-- PLUGINS CSS -->
+    <link rel="stylesheet" href="vendor/owl-carousel/carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="vendor/owl-carousel/carousel/owl.theme.css"/>
+    <link rel="stylesheet" href="mc_components/plugins/morris-chart/morris.min.css"/>
+
+    <!-- MAIN CSS (REQUIRED ALL PAGE)-->
+    <!--<link rel="stylesheet" href="style-responsive.css" />-->
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" href="styles/style-responsive.css" />
+
+</head>
+<body ng-app="adminApp">
+
+<div class="wrapper" ng-controller="MainCtrl">
+
+    <!--BEGIN TOP NAV-->
+    <top-navbar></top-navbar>
+    <!--ENG TOP NAV-->
+
+    <!--BEGIN COLOR SCHEMES-->
+    <color-schemes st-data="colorSchemes"></color-schemes>
+    <!--END COLOR SCHEMES-->
+
+    <!--BEGIN SIDEBAR LEFT-->
+    <sidebar-left st-menus="menus" st-settings="settings"></sidebar-left>
+    <!--END SIDEBAR LEFT-->
+
+    <!--BEGIN SIDEBAR RIGHT HEADING-->
+    <top-sidebar-right-heading class="sidebar-right-heading"></top-sidebar-right-heading>
+    <!--END SIDEBAR RIGHT HEADING-->
+
+    <!--BEGIN SIDEBAR RIGHT-->
+    <sidebar-right></sidebar-right>
+    <!--END SIDEBAR RIGHT-->
+
+    <!--BEGIN PAGE RIGHT-->
+    <div class="page-content">
+
+        <div ng-view="" style="padding: 5px 15px 0 15px"></div>
+        <page-footer st-author="{{footer.author}}" st-design="{{footer.design}}"></page-footer>
+
+    </div>
+    <!--END PAGE RIGHT-->
+</div>
+<mc-back-to-top></mc-back-to-top>
+
+
+<!-- MAIN JAVASRCIPT (REQUIRED ALL PAGE)-->
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<!--<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>-->
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/ui-bootstrap-tpls-0.11.0.js"></script>
+
+<!--NICE SCROLL JS-->
+<script src="mc_components/plugins/nicescroll/jquery.nicescroll.js"></script>
+
+<!-- OWL CAROUSEL JS-->
+<script src="mc_components/plugins/owl-carousel/owl.carousel.js"></script>
+
+<!-- WEATHER SKYCON JS-->
+<script src="vendor/skycons/skycons.js"></script>
+
+<!-- EASY PIE CHART JS -->
+<script src="vendor/easy-pie-chart/angular.easypiechart.min.js"></script>
+
+<!-- MORRIS JS -->
+<script src="mc_components/plugins/morris-chart/raphael.min.js"></script>
+<script src="mc_components/plugins/morris-chart/morris.min.js"></script>
+
+<!--MC COMPONENTS-->
+<script src="mc_components/mc-app.js"></script>
+<script src="mc_components/directives/mcDirective.js"></script>
+
+<!-- MAIN APPS JS -->
+<script src="scripts/app.js"></script>
+<script src="scripts/directives/mainDirective.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/filters/mainFilter.js"></script>
+
+<div class="style-color-schemes"></div>
+
+</body>
+</html>

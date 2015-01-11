@@ -1,0 +1,34 @@
+<div tabindex="5000" style="overflow: hidden;" class="sidebar-left sidebar-nicescroller">
+
+    <ul class="sidebar-menu">
+
+        <li ng-click="chung(-1)"><a href class="sidebar-left-content"><i class="fa fa-dashboard icon-sidebar" ></i>Dashboard</a></li>
+
+        <li ng-repeat="menu in menus"  ng-click="chung($index)">
+
+            <span ng-if="menu.label == 'heading'" class="static sidebar-left-content">{{menu.title | uppercase}}</span>
+            <a href ng-if="menu.label != 'heading'" class="sidebar-left-content">
+                <span class="icon-sidebar fa fa-{{menu.icon}} sidebar-left-content"></span>
+                <span class="fa fa-chevron-right chevron-icon-sidebar sidebar-left-content" ng-if="sub != $index"></span>
+                <span class="fa fa-chevron-right chevron-icon-sidebar icon-rotate sidebar-left-content" ng-if="sub == $index"></span>
+                {{menu.title}}
+                <span class="badge badge-warning span-sidebar" ng-show="{{menu.label == 'badge'}}">{{menu.submenu.length}}</span>
+                <span class="label label-info span-sidebar" ng-show="{{menu.label == 'info'}}">BS3</span>
+                <span class="label label-warning span-sidebar" ng-show="{{menu.label == 'hot'}}">HOT</span>
+                <span class="label label-success span-sidebar" ng-show="{{menu.label == 'top'}}">TOP</span>
+            </a>
+            <ul class="submenu" ng-if="sub == $index">
+                <li><a href="#fakelink">Default layout<span class="label label-success span-sidebar">CURRENT</span></a></li>
+                <li><a href="layout-no-sidebar-right.html">No sidebar right</a></li>
+                <li><a href="layout-profile-left.html">Profile summary left</a></li>
+                <li><a href="layout-no-sidebar-left.html">No sidebar left<span class="label label-danger span-sidebar">NEW</span></a></li>
+                <li><a href="layout-shrink-navbar.html">Shrink navbar<span class="label label-danger span-sidebar">NEW</span></a></li>
+                <li><a href="layout-top-navigation.html">Top navigation<span class="label label-danger span-sidebar">NEW</span></a></li>
+                <li><a href="layout-tour.html">Tour layout<span class="label label-danger span-sidebar">NEW</span></a></li>
+            </ul>
+        </li>
+
+        <li class="static sidebar-left-content">SYSTEM SETTING</li>
+        <li sidebar-left-settings st-data="settings"></li>
+    </ul>
+</div>

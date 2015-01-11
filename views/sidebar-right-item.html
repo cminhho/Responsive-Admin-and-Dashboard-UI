@@ -1,0 +1,46 @@
+<li class="static">{{title | uppercase}}</li>
+<li ng-repeat="item in data | filter:stFilter">
+    <a href="#fakelink" data-toggle="tooltip" title="Karen Wallace" data-placement="left" ng-show="{{userStatus}}">
+        <span class="user-status success" ng-show="{{item.status == 'online'}}"></span>
+        <span class="user-status warning" ng-show="{{item.status == 'idle'}}"></span>
+        <span class="user-status danger" ng-show="{{item.status == 'offline'}}"></span>
+        <img ng-src="images/avatar/{{item.avatar}}" class="ava-sidebar img-circle" alt="Avatar">
+        <i class="fa fa-{{item.divice}} device-status" ng-show="{{title != 'offline users'}}"></i>
+        <span class="activity">{{item.name}}</span>
+        <span class="small-caps" ng-show="{{item.status == 'online'}}">{{item.content}}</span>
+        <span class="small-caps">{{item.time}}</span>
+    </a>
+
+    <a href="#fakelink" data-toggle="tooltip" title="Karen Wallace" data-placement="left"
+       ng-show="{{notificationStatus}}">
+        <img ng-src="images/avatar/{{item.avatar}}" class="ava-sidebar img-circle" alt="Avatar">
+        <span class="activity">{{item.content}}</span>
+        <span class="small-caps">{{item.time}}</span>
+    </a>
+
+    <a href="#fakelink" data-toggle="tooltip" title="in progress" data-placement="left" ng-show="{{taskStatus}}">
+        <i style="width: 35px;" class="fa fa-exclamation icon-task-sidebar progress"
+           ng-show="{{item.status == 'deadline'}}"></i>
+        <i style="width: 35px;" class="fa fa-check-circle-o icon-task-sidebar completed"
+           ng-show="{{item.status == 'complete'}}"></i>
+        <span class="activity">{{item.content}}</span>
+        <span class="small-caps">Deadline : {{task.time}}</span>
+    </a>
+
+    <div ng-show="{{settingStatus}}">
+        <div class="switch">
+            <div class="onoffswitch blank">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{item.setting}}"
+                       ng-checked="{{item.done}}">
+                <label class="onoffswitch-label" for="{{item.setting}}">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+        </div>
+        <div class="text-content">{{item.setting}}</div>
+    </div>
+
+
+</li>
+

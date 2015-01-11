@@ -1,0 +1,7 @@
+<h4 class="small-title"><strong><i class="fa fa-users"></i> {{title | uppercase}}</strong></h4>
+
+<!-- BEGIN USER CARD LONG -->
+<div ng-repeat="item in list | limitTo: 3">
+    <friend-requests-item st-index="{{$index}}" st-data="item"></friend-requests-item>
+</div><!-- /.the-box .no-border -->
+<!-- END USER CARD LONG -->

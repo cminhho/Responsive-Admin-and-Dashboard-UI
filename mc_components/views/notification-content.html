@@ -1,0 +1,42 @@
+<div class="nav-dropdown-heading">
+    {{title}}
+</div>
+<!-- /.nav-dropdown-heading -->
+<div style="position: relative; overflow: hidden; width: auto; height: 350px;" class="slimScrollDiv">
+    <div style="overflow: hidden; width: auto; height: 350px;" class="nav-dropdown-content scroll-nav-dropdown">
+        <ul>
+            <li class="unread" ng-repeat="item in data | limitTo: 6">
+                <a href="#fakelink" ng-show="{{!userStatus}}">
+                    <img ng-src="images/avatar/{{item.avatar}}" class="absolute-left-content img-circle" alt="Avatar">
+                    <strong>{{item.name}}</strong> {{item.content}}
+                    <span class="small-caps" style="display: block">{{item.time}}</span>
+                </a>
+            </li>
+
+            <li ng-show="{{userStatus}}" ng-repeat="item in data | limitTo: 6" class="static-list">
+                <img src="images/avatar/{{item.avatar}}" class="absolute-left-content img-circle" alt="Avatar">
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <strong>{{item.name}}</strong>
+                        <span class="small-caps" style="display: block">{{item.status}}</span>
+                    </div>
+                    <div class="col-xs-6 text-right btn-action">
+                        <button class="btn btn-success btn-xs">Accept</button>
+                        <button class="btn btn-danger btn-xs">Ignore</button>
+                    </div>
+                    <!-- /.col-xs-5 text-right btn-cation -->
+                </div>
+                <!-- /.row -->
+            </li>
+
+        </ul>
+    </div>
+    <div style="background: none repeat scroll 0% 0% rgb(0, 0, 0); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"
+         class="slimScrollBar"></div>
+    <div style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(51, 51, 51); opacity: 0.3; z-index: 90; right: 1px;"
+         class="slimScrollRail"></div>
+</div>
+<!-- /.nav-dropdown-content scroll-nav-dropdown -->
+<button class="btn btn-primary btn-square btn-block">See all notifications</button>
+

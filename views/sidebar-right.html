@@ -1,0 +1,60 @@
+<div class="sidebar-right sidebar-nicescroller" id="sidebar-right" tabindex="5000"
+     style="overflow: hidden; outline: none;">
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="online-user-sidebar">
+            <!--sidebar-menu online-user-->
+            <ul class="sidebar-menu sidebar-notification">
+
+                <li sidebar-right-item st-filter="online" st-title="online users" st-data="users" st-status="user"></li>
+
+                <li sidebar-right-item st-filter="idle" st-title="idle users" st-data="users" st-status="user"></li>
+
+                <li sidebar-right-item st-filter="offline" st-title="offline users" st-data="users" st-status="user"></li>
+
+            </ul>
+        </div>
+        <!--BEGIN NOTIFICATION SIDEBAR-->
+        <div class="tab-pane fade" id="notification-sidebar">
+            <!--<sidebar-right-notifications st-data="notifications"></sidebar-right-notifications>-->
+            <ul class="sidebar-menu sidebar-notification">
+
+                <li sidebar-right-item st-filter="!Yesterday" st-title="TODAY" st-data="notifications"
+                    st-status="notification"></li>
+
+                <li sidebar-right-item st-filter="Yesterday" st-title="YESTERDAY" st-data="notifications"
+                    st-status="notification"></li>
+
+                <li class="static text-center">
+                    <button class="btn btn-primary btn-sm">See all notifications</button>
+                </li>
+
+            </ul>
+        </div>
+        <!--END NOTIFICATION SIDEBAR-->
+        <div class="tab-pane fade" id="task-sidebar">
+            <!--sidebar-menu sidebar-task-->
+            <ul class="sidebar-menu sidebar-notification">
+
+                <li sidebar-right-item st-filter="deadline" st-title="UNCOMPLETED" st-data="tasks"
+                    st-status="task"></li>
+
+                <li sidebar-right-item st-filter="complete" st-title="COMPLETED" st-data="tasks" st-status="task"></li>
+
+                <li class="static text-center">
+                    <button class="btn btn-success btn-sm">See all tasks</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /#task-sidebar -->
+        <div class="tab-pane fade" id="setting-sidebar">
+            <ul class="sidebar-menu">
+
+                <li sidebar-right-item st-filter="" st-title="ACCOUNT SETTING" st-data="accountSetting"
+                    st-status="setting"></li>
+
+            </ul>
+        </div>
+        <!-- /#setting-sidebar -->
+    </div>
+    <!-- /.tab-content -->
+</div>

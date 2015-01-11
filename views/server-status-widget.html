@@ -1,0 +1,43 @@
+<!-- BEGIN SERVER STATUS WIDGET -->
+<div class="panel panel-success panel-square panel-no-border">
+    <div class="panel-heading lg">
+        <div class="right-content">
+            <button class="btn btn-success to-collapse" data-toggle="collapse" data-target="#panel-chart-widget-1"><i
+                    class="fa fa-chevron-up"></i></button>
+        </div>
+        <h3 class="panel-title"><strong>{{title | uppercase}}</strong></h3>
+    </div>
+    <div id="panel-chart-widget-1" class="collapse in">
+        <div class="the-box no-border full bg-success no-margin">
+            <div id="realtime-chart-widget">
+                <div id="realtime-chart-container-widget"></div>
+            </div>
+            <!-- /.realtime-chart -->
+        </div>
+        <!-- /.the-box .no-border -->
+        <div class="the-box no-border">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-6 text-center" ng-repeat="item in chart">
+                            <chart-widget st-data="item"></chart-widget>
+                        </div>
+                        <!-- /.col-xs-6 -->
+                    </div>
+                    <!-- /.row -->
+                    <hr/>
+                    <button class="btn btn-block btn-danger"><i class="fa fa-cogs"></i> Resource monitor</button>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6">
+                    <widget-system-status></widget-system-status>
+                </div>
+                <!-- /.col-sm-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.the-box .no-border -->
+    </div>
+    <!-- /#panel-chart-widget-1 -->
+</div><!-- /.the-box .no-border -->
+<!-- END SERVER STATUS WIDGET -->

@@ -1,0 +1,20 @@
+<div class="panel panel-success panel-square panel-no-border task-list-wrap">
+    <div class="panel-heading lg">
+        <h3 class="panel-title"><i class="fa fa-check-square-o"></i> {{title}} </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in list">
+            <div class="checkbox">
+                <input type="checkbox" id="{{item.title}}" ng-model="item.complete">
+                <label for="{{item.title}}">{{item.title}}</label>
+            </div>
+            <!-- /.checkbox -->
+        </li>
+    </ul>
+    <div class="panel-footer">
+        <p>
+            <button class="btn btn-danger btn-perspective btn-block">See all tasks</button>
+        </p>
+    </div>
+</div><!-- /.panel panel-success -->
+            
