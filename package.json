@@ -1,0 +1,19 @@
+{
+  "name": "Responsive-Admin-and-Dashboard-UI",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cminhho/Responsive-Admin-and-Dashboard-UI.git"
+  },
+  "author": "cminhho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cminhho/Responsive-Admin-and-Dashboard-UI/issues"
+  },
+  "homepage": "https://github.com/cminhho/Responsive-Admin-and-Dashboard-UI"
+}
