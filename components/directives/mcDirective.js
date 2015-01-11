@@ -7,7 +7,7 @@
     .directive('mcBackToTop', function () {
       return{
         restrict: 'EA',
-        templateUrl: 'mc_components/views/back-to-top.html',
+        templateUrl: 'components/views/back-to-top.html',
         link: function (scope, element, attr) {
           /** BEGIN BACK TO TOP **/
           element.find("#back-top").hide();
@@ -42,7 +42,7 @@
             $scope.data.splice(index, 1);
           }
         },
-        templateUrl: 'mc_components/views/alert.html',
+        templateUrl: 'components/views/alert.html',
         link: function (scope, element, attr) {
 
           scope.max = attr.stMax != null ? attr.stMax : scope.data.length;
@@ -56,7 +56,7 @@
         scope: {
           data: '=stData'
         },
-        templateUrl: 'mc_components/views/socical.html'
+        templateUrl: 'components/views/socical.html'
       };
     })
     .directive('mcSocicalItem', function () {
@@ -66,7 +66,7 @@
           data: '=stData',
           style: '@stStyle'
         },
-        templateUrl: 'mc_components/views/socical-item.html'
+        templateUrl: 'components/views/socical-item.html'
       };
     })
     .directive('mcNotification', function () {
@@ -78,13 +78,13 @@
           icon: '@stIcon',
           badge: '@stBadge'
         },
-        templateUrl: 'mc_components/views/notification.html'
+        templateUrl: 'components/views/notification.html'
       };
     })
     .directive('mcNotificationContent', function () {
       return{
         restrict: 'A',
-        templateUrl: 'mc_components/views/notification-content.html',
+        templateUrl: 'components/views/notification-content.html',
         scope: {
           data: '=stData',
           title: '@stTitle'
@@ -146,7 +146,7 @@
         scope: {
           list: '=mcData'
         },
-        templateUrl: 'mc_components/views/carousel.html',
+        templateUrl: 'components/views/carousel.html',
         link: function (scope, element, attrs) {
 
           $timeout(function () {
@@ -174,7 +174,7 @@
                   list:'=stList',
                   title:'@stTitle'
               },
-              templateUrl:'mc_components/views/task-list.html'
+              templateUrl:'components/views/task-list.html'
           };
       })
     .directive('mcRating', function(){
@@ -202,7 +202,7 @@
               scope:{
                   data:'=stData'
               },
-              templateUrl:'mc_components/views/progress.html',
+              templateUrl:'components/views/progress.html',
               link: function (scope, element, attrs) {
                   var sstatus = element.find('#sstatus'),
                       percent = scope.data.percent;
@@ -228,7 +228,7 @@
       .directive('mcWeatherSmallIcon', function () {
           return{
               restrict:'E',
-              templateUrl:'mc_components/views/weather-small-icon.html',
+              templateUrl:'components/views/weather-small-icon.html',
               link:function (scope, element, attr) {
                   var skycon = element.find('.skycon'),
                       index = attr.stIndex,
