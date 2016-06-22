@@ -76,6 +76,6 @@
     </li>
     <li><a href="http://arshaw.com/fullcalendar/">Full calendar</a>
     </li>
-    <li><a href="https://github.com/CodeSeven/toastr">Toastr notification</a>
+    <li><a href="https://github.com/CodeSeven/toastr">Toastr notification </a>
     </li>
 </ul>
